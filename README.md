@@ -40,3 +40,4 @@ Buat file baru dengan nama header.php
 
 ![image](https://github.com/user-attachments/assets/f4e1f61f-8c8c-4c60-8828-925dd6950b2b)
 
+File ini memuat struktur dasar dokumen HTML, termasuk elemen `<head>` yang berisi metadata seperti judul halaman dan tautan ke file CSS. Selain itu, terdapat navigasi utama situs yang dirancang untuk digunakan secara konsisten di semua halaman.
