@@ -45,3 +45,5 @@ File ini memuat struktur dasar dokumen HTML, termasuk elemen `<head>` yang beris
 
 <hr> <br>
 
+<h2>Buat file baru dengan nama footer.php
+</h2>
