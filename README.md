@@ -134,4 +134,65 @@ Berikut adalah implementasi tugas lab 8 dengan modularisasi, terdiri dari bebera
 ![image](https://github.com/user-attachments/assets/c320f9e9-0a79-4fb9-b151-301fcb47eec6)
 
         
+<h2>buat file index dengan nama index.php</h2>
+
+        <?php
+        require('tugas_header.php'); 
+        
+        $conn = new mysqli("localhost", "root", "", "latihan1");
+        
+        if ($conn->connect_error) {
+            die("Koneksi gagal: " . $conn->connect_error);
+        }
+        ?>
+        
+        <div class="content">
+            <h2>Data Barang</h2>
+            <a href="tambah.php" style="margin-bottom: 10px; display: inline-block;">Tambah Data</a>
+            <table border="1" cellspacing="0" cellpadding="10">
+                <tr>
+                    <th>ID</th>
+                    <th>Kategori</th>
+                    <th>Nama</th>
+                    <th>Gambar</th>
+                    <th>Harga Beli</th>
+                    <th>Harga Jual</th>
+                    <th>Stok</th>
+                    <th>Aksi</th>
+                </tr>
+                <?php
+             
+                $sql = "SELECT * FROM data_barang";
+                $result = $conn->query($sql);
+        
+              
+                if ($result->num_rows > 0) {
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>
+                            <td>{$row['id_barang']}</td>
+                            <td>{$row['kategori']}</td>
+                            <td>{$row['nama']}</td>
+                            <td><img src='{$row['gambar']}' alt='{$row['nama']}' width='50'></td>
+                            <td>{$row['harga_beli']}</td>
+                            <td>{$row['harga_jual']}</td>
+                            <td>{$row['stok']}</td>
+                            <td>
+                                <a href='ubah.php?id={$row['id_barang']}'>Ubah</a> |
+                                <a href='hapus.php?id={$row['id_barang']}' onclick='return confirm(\"Yakin ingin menghapus data ini?\")'>Hapus</a>
+                            </td>
+                        </tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='8'>Tidak ada data</td></tr>";
+                }
+        
+                $conn->close();
+                ?>
+            </table>
+        </div>
+        
+        <?php
+        require('footer.php'); 
+        ?>
+        
         
