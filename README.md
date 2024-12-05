@@ -8,6 +8,7 @@
 
 ![image](https://github.com/user-attachments/assets/18050379-0358-4e41-94d4-abfd4ebac156)
 
+<hr> <br>
 
 <h2>2. Masuk ke VsCode dan masuk ke folder Latihanweb9_modular</h2>
 
@@ -41,3 +42,6 @@ Buat file baru dengan nama header.php
 ![image](https://github.com/user-attachments/assets/f4e1f61f-8c8c-4c60-8828-925dd6950b2b)
 
 File ini memuat struktur dasar dokumen HTML, termasuk elemen `<head>` yang berisi metadata seperti judul halaman dan tautan ke file CSS. Selain itu, terdapat navigasi utama situs yang dirancang untuk digunakan secara konsisten di semua halaman.
+
+<hr> <br>
+
